@@ -7,10 +7,23 @@ export const playSuccessSound = () => {
 };
 
 export const playWrong = () => {
-  const audio = new Audio('/sounds/wrong.mp3'); // تأكد إن ملف الصوت ده موجود
+  const audio = new Audio('/sounds/wrong.mp3');
   audio.volume = 0.5;
   audio.play().catch((e) => console.log("Audio play failed", e));
 };
 
-// هذا السطر مهم عشان لو في ملفات تانية بتنادي عليها بالاسم القديم
+// عشان لو حد نادى عليها بالاسم ده
 export const playWrongSound = playWrong;
+
+// الدوال الجديدة الناقصة
+export const playButtonClick = () => {
+  const audio = new Audio('/sounds/click.mp3');
+  audio.volume = 0.5;
+  audio.play().catch((e) => console.log("Audio play failed", e));
+};
+
+export const playRocketSound = () => {
+  const audio = new Audio('/sounds/rocket.mp3');
+  audio.volume = 0.5;
+  audio.play().catch((e) => console.log("Audio play failed", e));
+};
